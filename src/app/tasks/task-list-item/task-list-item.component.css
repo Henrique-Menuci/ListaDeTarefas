@@ -1,0 +1,8 @@
+.task-item-description {
+  flex-grow: 1; /*para o texto ocupar a maior parte da tela  */
+  white-space: pre-wrap;
+}
+
+.task-completed {
+  text-decoration: line-through;
+}

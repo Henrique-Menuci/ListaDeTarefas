@@ -1,0 +1,21 @@
+<div>
+  <input type="checkbox" class="form-chack-input" [(ngModel)]="task.completed" (change)= "onCompletedCheckChange(task)"/> &nbsp;<!--two way data binding
+  / ele passa o valor como completed-->
+</div >
+
+<div  [innerHTML]="task.description "class="task-item-description"
+      [ngClass]="task.completed ? 'task-completed' : ''"> <!--if se classe receber boolean positivo -->
+       <!--exibir lista na tela // innerHTML para quebrar linhas-->
+    </div>
+
+<div>
+    <button type="button" [routerLink] ="['/edit', task.id]" class="btn btn-primary mr-1">
+      Alterar
+    </button>
+</div>
+
+<div>
+    <button type="button"  class="btn btn-danger" (click)= "remove(task)">
+        Excluir
+    </button>
+</div>

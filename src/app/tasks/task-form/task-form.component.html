@@ -1,0 +1,21 @@
+<h2> {{ title}}</h2>
+<hr/>
+
+
+<section id="form">
+  <form (ngSubmit)="onSubmit()"> <!--ao confirmar ele chamara o metodo onSubmit que foi criado no ts-->
+      <div class="form=group">
+        <label> Descrição da Tarefa</label>
+        <textarea [(ngModel)]="task.description"
+        name="description"
+        rows="5"
+        class="form-control">
+        <!-- ngModel para associar no formulario html e no task.description // bind-->
+        </textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary mr-2"> Adicionar</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="['']"> Cancelar</button> <!--direciona para a rota vazia-->
+
+  </form>
+</section>

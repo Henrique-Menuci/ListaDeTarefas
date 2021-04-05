@@ -9,21 +9,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TaskListItemComponent implements OnInit {
 
-  //a task sera um input
+  // a task sera um input
   @Input()
   task: Task;
 
-  constructor(private taskService: TaskService) { } //chama o metodo da classe
+  constructor(private taskService: TaskService) { } // chama o metodo da classe
 
   ngOnInit(): void {
   }
 
-  remove(task: Task){
+  remove(task: Task): void{
     this.taskService.delete(task.id); // deletar
   }
 
-  onCompletedCheckChange(task: Task){
-    this.taskService.save(task); //salvar o checkbox
+  onCompletedCheckChange(task: Task): void{
+    this.taskService.save(task); // salvar o checkbox
   }
 
 }

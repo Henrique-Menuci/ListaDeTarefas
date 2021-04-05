@@ -11,7 +11,7 @@ import { TaskFormComponent } from './tasks/task-form/task-form.component';
 @NgModule({
   declarations: [
 
-    //declaracao para usar arquivos
+    // declaracao para usar arquivos
     AppComponent,
     TaskListComponent,
     TaskListItemComponent,
@@ -19,7 +19,7 @@ import { TaskFormComponent } from './tasks/task-form/task-form.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule, //importando o formsmodule do angular
+    FormsModule, // importando o formsmodule do angular
     AppRoutingModule
   ],
   providers: [],

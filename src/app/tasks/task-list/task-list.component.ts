@@ -10,10 +10,10 @@ import { Task } from '../shared/task';
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
 
-  //injecao de dependencia
+  // injecao de dependencia
   constructor(private taskService: TaskService ) { }
 
-  ngOnInit(): void { //quando o componente iniciar
+  ngOnInit(): void { // quando o componente iniciar
     this.tasks = this.taskService.getAll();
   }
 
